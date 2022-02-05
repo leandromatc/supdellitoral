@@ -1,0 +1,269 @@
+/* Estilos generales */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* Nombras las áreas */
+header {
+  grid-area: head;
+  margin: 0px 30px;
+  margin-top: 15px;
+  padding: 5px;
+}
+
+nav {
+  grid-area: menu;
+  margin: 0px 30px;
+  background-color: #4765e6;
+  border-radius: 30px;
+  padding: 10px;
+  color: white;
+}
+
+#intro {
+  grid-area: intro;
+  margin: 15px 30px;
+}
+
+#productos {
+  grid-area: productos;
+  margin: 10px 30px;
+}
+
+footer {
+  grid-area: foot;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #172449;
+  color: white;
+}
+
+nav span a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: larger;
+    transition: all 0.3s ease 0s;
+  }
+  
+  nav span a:hover {
+    color: lightgray;
+  }
+  
+h1 {
+      color: #172449;
+      font-size: xxx-large;
+      font-weight: 700;
+      text-align: center;
+}
+
+  article p {
+    margin 5px;
+    text-align: center;
+    padding: 10px;
+    color: #172449;
+  }
+  
+  article h2 {
+    margin 5px;
+    text-align: center;
+    padding: 10px;
+    color: #172449;
+    font-size: medium;
+  }
+
+  button {
+    padding: 9px 25px;
+    margin-left: 5px;
+    background-color: #4765e6;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+  }
+  
+  button:hover {
+    background-color: orange;
+  }
+  
+  .footerFlex {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  footer p {
+    text-align: center;
+  }
+
+
+  /* RESPONSIVE */
+
+/* ESCRITORIO */
+
+@media (min-width: 1024px) {
+
+    .headFlex {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .menuFlex {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      span {
+        margin-left: 10px;
+      }
+    
+      .logo {
+        margin-right: auto;
+      }  
+        
+      .prodFlex {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+    #gridAreas {
+        display: grid;
+        /* grid por áreas */
+        grid-template-areas: 
+          /* 1 columna, 4 filas */
+          "head" /* fila 1 */
+          "menu" /* fila 2 */
+          "intro" /* fila 3 */
+          "productos" /* fila 4 */
+          "foot" /* fila 5 */;
+        grid-template-columns: 100%;
+        grid-template-rows: 150px 40px 80px auto 150px;
+      }
+}
+
+/* TABLET */
+
+@media (min-width: 481px) and (max-width: 1023px) {
+
+    input {
+      display: none;
+    }
+  
+    .headFlex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+
+    .menuFlex {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    span {
+      margin-left: 5px;
+    }
+    nav span a {
+      font-size: 13px;
+    }
+
+    .prodFlex {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }  
+
+    #gridAreas {
+    display: grid;
+    /* grid por áreas */
+    grid-template-areas: 
+        /* 1 columna, 4 filas */
+        "head" /* fila 1 */
+        "menu" /* fila 2 */
+        "intro" /* fila 3 */
+        "productos" /* fila 4 */
+        "foot" /* fila 5 */;
+    grid-template-columns: 100%;
+    grid-template-rows: 150px 40px 80px auto 150px;
+      }
+}
+  
+
+/* CELULAR */
+
+@media (max-width: 480px) {
+  
+
+    input {
+      display: none;
+    }
+  
+    .headFlex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+      header div a img {
+        width: 50%;
+      }
+  
+    nav span a {
+      font-size: small;
+    }
+  
+    span {
+      width: 100%;
+      text-align: center;
+      border-radius: 30px;
+      border-bottom: white solid 0.5px;
+      transition: all 0.3s ease 0s;
+    }
+    
+    span:hover {
+      background-color: #172449;
+    }
+  
+    .menuFlex {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+  
+  
+    .prodFlex {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    #gridAreas {
+      display: grid;
+      /* grid por áreas */
+      grid-template-areas: 
+        /* 1 columna, 4 filas */
+        "head" /* fila 1 */
+        "menu" /* fila 2 */
+        "intro" /* fila 3 */
+        "productos" /* fila 4 */
+        "foot" /* fila 5 */;
+      grid-template-columns: 100%;
+      grid-template-rows: 100px 120px  80px auto 150px;
+    }
+  }
