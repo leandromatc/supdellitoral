@@ -52,7 +52,7 @@ footer {
   grid-area: foot;
   margin-top: 20px;
   padding: 20px;
-  background-color: #172449;
+  background: linear-gradient(to bottom, #4765e6, #172449);
   color: white;
 }
 
